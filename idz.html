@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+	 <meta http-equiv="Refresh" content="199" />
+	 <link rel="stylesheet" type="text/css" href="idz.css">
+	<title>kost</title>
+	<style type="text/css">
+		/* Слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+}
+/* Картинка масштабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 30%;
+    height: 300px;
+}
+/* Кнопки вперед и назад */
+.slider .previous, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/* Анимация слайдов */
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+	</style>
+</head>
+<body bgcolor="#736F6F" >
+	<script type="text/javascript">
+		/* Устанавливаем индекс слайда по умолчанию */
+let slideIndex = 1;
+showSlides(slideIndex);
+
+/* Увеличиваем индекс на 1 — показываем следующий слайд*/
+function nextSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Уменьшает индекс на 1 — показываем предыдущий слайд*/
+function previousSlide() {
+    showSlides(slideIndex -= 1);  
+}
+
+/* Устанавливаем текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+/* Функция перелистывания */
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("item");
+    
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+  
+  /* Проходим по каждому слайду в цикле for */
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }   
+    slides[slideIndex - 1].style.display = "block"; 
+}
+	</script>
+<header class="masthead">
+<div class="logo">
+	<img src="pngwing.com.png"style="height:150px;width:150px;margin-left:45%;">
+<
+      </div>
+  </div>
+  <h2 class="site-title" style="color:black;">Трішки інформації про мене</h2><div style="height: 500px;">
+  <img src="silver.jpg" alt="A man and a woman standing in the water of the Oslo fjord." 
+  style="height: 500px;position: absolute;">
+  <div style="position: absolute; margin-bottom:1000px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20238.552789435016!2d33.97577398060303!3d50.649050738194134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4129c6cc54153b59%3A0xba68cd047abeb806!2z0JHQtdC10LLQviwg0KHRg9C80YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDQyNTEy!5e0!3m2!1sru!2sua!4v1621791995545!5m2!1sru!2sua" width="600" height="450" style="border:0; margin-top: 24px;margin-left:24px;" allowfullscreen="" loading="lazy" ></iframe>
+  </div> <p style="position: absolute;margin-left:45%;color:white;width: 55%;">
+  	Місце проживання <br><br>Бе́єве — село в Україні, у Роменському районі Сумської області. Населення села становить 701 осіб.
+
+Орган місцевого самоврядування — Беївська сільська рада.
+
+Після ліквідації Липоводолинського району 19 липня 2020 року село увійшло до Роменського району[<br></p></div>
+</header>
+
+<main id="content" class="main-area">
+  <section class="splash grid">
+    <div class="splash-content">
+      <h2 class="content-title" style="margin-top:10px;">Мої успіхи в навчанні</h2>
+      <div>
+       <table border="1" width="1000" align="center" style="margin-left:-100px;">
+          	<tr style="color:black; font-size: 25px;">
+          		<td align="center">Предмети</td>
+          		<td align="center">Викладачі</td>
+          		<td align="center">Оцінки</td>
+          	</tr>
+          	<tr>
+          		<td align="center">Архітектура обчислювальних систем</td>
+          		<td align="center">Ломакін О.М.</td>
+          		<td align="center">3</td>
+          	</tr>
+          	<tr>
+          		<td align="center">Дискретна математика</td>
+          		<td align="center">Татарінова О.А.</td>
+          		<td align="center">3</td>
+          	</tr>
+          	<tr>
+          		<td align="center">Нарисна геометрія та комп'ютерна графіка</td>
+          		<td align="center">Матюшенко М.В.</td>
+          		<td align="center">3</td>
+          	</tr>
+          	<tr>
+          		<td align="center">Об'ективно орієноване програмування</td>
+          		<td align="center">Водка О.О.</td>
+          		<td align="center">3</td>
+          	</tr>
+          	<tr>
+          		<td align="center">Основи графічної композиції у віртуальному середовищі</td>
+          		<td align="center">Глібко О.А.</td>
+          		<td align="center">3</td>
+          	</tr>
+          	<tr>
+          		<td align="center">Іноземна мова</td>
+          		<td align="center">Шеїна Л.О.</td>
+          		<td align="center">3</td>
+          	</tr>
+          	<tr>
+          		<td align="center">Правознасвто</td>
+          		<td align="center">Кузьменко О.В.</td>
+          		<td align="center">4</td>
+          	</tr>
+          	<tr>
+          		<td align="center">Фізична культура</td>
+          		<td align="center">Ширяєва С.В.</td>
+          		<td align="center">3</td>
+          	</tr>
+          </table>
+      </div><!-- .splash-text -->
+    </div><!-- .splash-content -->
+  </section><!-- .splash -->
+
+  <section class="buckets grid">
+  	<i style="color:white;margin-bottom: 150px; margin-left:50px;">Мої вподобання -<br><br><br>
+  		Моя улюблена 3D модель <a href="3Dm.html"style="">Kлікай</a></i>
+    <ul>
+      <li>
+      	<center>
+        <img src="player.png" alt="" style="height:150px;width:150px;">
+        </center>
+        <div class="bucket">
+          <h3 class="bucket-title">Media_player</h3>
+          <p>- Форсаж<br>- Втеча<br>- Сам у дома<br>- Малюк на драйві</p>
+        </div><!-- .bucket -->
+      </li>
+      <li>
+      	<center>
+        <img src="nastr.jpg" style="height:150px;width:250px;" alt=""></center>
+        <div class="bucket">
+          <h3 class="bucket-title">Настрій</h3>
+          <div>- Гарний<br>- Дратівливий<br>- Дружелюбний </div>
+          <ul style="margin-top: 10px;">
+          <img src="kartinka1.png" style="width: 30px;height:30px;">
+          <img src="kartinka2.png" style="width: 30px;height:30px;">
+          <img src="kartinka3.png" style="width: 30px;height:30px;">
+          </ul>
+        </div><!-- .bucket -->
+      </li>
+      <li>
+      	<center>
+        <img src="yin.png" alt="" style="height:150px;width:150px;">
+    </center>
+        <div class="bucket">
+          <h3 class="bucket-title">Улюблена цитата</h3>
+          <p>Даже после 100 неудачных попыток не стоит отчаиватся,ведь 101 может изменить жизнь.</p>
+        </div><!-- .bucket -->
+      </li>
+    </ul>
+    <div style="background-color:white;height:96%;"><img src="kto.jpg"style="height:150px;width:250px;" ><h3 class="bucket-title">Пару слів про мене:</h3>
+   &nbsp - Добрий<br>&nbsp - Вірний <br>&nbsp- Спокійний<br>&nbsp- Лінивий
+</div>
+  </section>
+
+  <section class="more grid" style="background-color:silver;">
+    <div class="more-content" style="color:#FDFBFB;">
+      <h2 class="content-title">Слайдер</h2>
+      <!-- Основной блок слайдера -->
+<div class="slider" style="">
+  
+    <!-- Первый слайд -->
+    <div class="item" style="position: absolute;margin-left:50px;">
+        <img src="dot.jpeg" style="float: left;" style="width:200px;">
+        <p style="margin-left:250px;">FIFA — серія відеоігор жанру футбольних симуляторів, що розробляється студією EA Canada, яка входить в корпорацію Electronic Arts. Ігри серії видаються під брендом EA Sports. Щороку виходить нова версія гри, в яку вносяться зміни, які відбулися у футболі за минулий рік. Як правило, нова версія симулятора FIFA виходить на початку осені. Крім того, існують спеціальні ігри серії, присвячені Чемпіонату світу чи Європи з футболу, FIFA Street, FIFA Manager, інші. Electronic Arts володіє великою кількістю ліцензій футбольних ліг, чемпіонатів, команд та гравців, що виступають в цих чемпіонатах. Останнім релізом EA на цей момент є FIFA 20, доступна майже на всіх сучасних ігрових платформах.</p>
+    </div>
+  
+    <!-- Второй слайд -->
+    <div class="item" style="position: absolute;margin-left:50px;">
+        <img src="fot.jpg" style="width:200px;">
+        <p style="margin-left:250px;margin-top:-300px;">Футбол є одним із найпопулярніших видів спорту у світі. У футбол грають м'ячем на прямокутному трав'яному полі (іноді траву замінюють штучним покриттям) з воротами на двох протилежних сторонах поля. Метою гри є забити якомога більше голів; тобто, завести м'яч у ворота супротивника якомога більше разів. Головною особливістю футболу є те, що гравці (за винятком воротарів) не можуть в межах ігрового поля торкатися м'яча руками. Переможцем гри є команда, що забила за час матчу (два тайми по 45 хвилин) більше голів, ніж супротивник.</p>
+    </div>
+  
+    <!-- Третий слайд -->
+    <div class="item" style="position: absolute;">
+        <img src="ya1.jpg" style="margin-left:50px; width:230px;">
+        <p style="margin-top:-300px;margin-left:300px;">
+Моє ім'я Ярослав,можна просто Ярік.<br>
+Серед занять в університеті веб технології є найбільш цікавими для мене.
+<br>Сподіваюся й надалі розвиватися в цьому напрямку
+<br>
+
+        </p>
+    </div>
+  
+    <!-- Кнопки-стрелочки -->
+    <a class="previous" onclick="previousSlide()">&#10094;</a>
+    <a class="next" onclick="nextSlide()">&#10095;</a>
+</div>
+    </div><!-- .more-content -->
+  </section><!-- .more -->
+  <section class="twins grid">
+    <div class="twin" >
+      <h2 class="content-title">Контактна інформація</h2>
+      <ul style="list-style: none;">
+      	<li>Почта:<a href="yarik.h16@gmail.com" style="list-style: none;"> &nbsp yarik.h16@gmail.com</a></li>
+      	<li>Адрес:<a href="https://goo.gl/maps/SVVxHEcPNqEoZA376"> &nbsp Беєве Липоводолинский район Сумска обл. вулиця Вільна.</a></li>
+      </ul>
+    </div>
+    <div class="twin">
+      <h2 class="content-title">Соц-мережі</h2>
+     <ul >
+      	<li>Інстаграм:<a href="https://instagram.com/____y___h____?utm_medium=copy_link"> 
+      	&nbsp ____y___h____.
+
+</a></li>
+    </div>
+  </section><!-- .twins -->
+</main>
+
+<script type="text/javascript">
+	document.body.style.height = '500px';
+document.body.addEventListener('click', function(e){
+    var self = this,
+        old_bg = this.style.background;
+    this.style.background = this.style.background=='silver'? 'gold':'silver';
+    setTimeout(function(){
+        self.style.background = old_bg;
+    }, 1000000);
+})
+</script>
+</body>
+</html>
